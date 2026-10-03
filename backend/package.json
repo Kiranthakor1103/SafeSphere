@@ -1,0 +1,54 @@
+{
+  "name": "disasterconnect-backend",
+  "version": "1.0.0",
+  "description": "DisasterConnect - Disaster Management Platform API",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "seed:disasters": "ts-node src/seed/seedDisasters.ts",
+    "seed:users": "ts-node src/seed/seedUsers.ts",
+    "seed:scenario": "ts-node src/seed/seedSabarmatiScenario.ts",
+    "migrate:districts": "ts-node src/seed/migrateDistrictCodes.ts",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "disaster",
+    "management",
+    "api"
+  ],
+  "author": "DisasterConnect",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/multer": "^2.2.0",
+    "@types/node": "^26.1.2",
+    "@types/pg": "^8.11.6",
+    "nodemon": "^3.1.14",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "bullmq": "^5.8.2",
+    "cors": "^2.8.6",
+    "country-state-city": "^3.2.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.3.0",
+    "ioredis": "^5.4.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.0",
+    "morgan": "^1.11.0",
+    "mqtt": "^5.5.5",
+    "multer": "^2.2.0",
+    "pg": "^8.11.5",
+    "socket.io": "^4.8.3"
+  }
+}
